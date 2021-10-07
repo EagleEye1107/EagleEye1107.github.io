@@ -204,8 +204,6 @@
 	      	if ($('body').hasClass('menu-is-open')) {
 					$('#header-menu-trigger').trigger('click');
 				}
-
-	      	window.location.hash = target;
 	      });
 	  	});
 
