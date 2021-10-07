@@ -2066,7 +2066,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-bottom: 3rem;
   padding: 0 50px;
 }
-#services .services-list .service-item p {
+#services .services-list .service-item p, .ulClass {
   font-family: "montserrat-bold", sans-serif;
   color: #808080;
 }
@@ -2179,9 +2179,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   position: relative;
   overflow: hidden;
 }
-.bricks-wrapper .item-wrap .overlay {
-  cursor: zoom-in;
-}
 .bricks-wrapper .item-wrap .overlay img {
   vertical-align: bottom;
   -moz-transition: all 0.3s ease-in-out;
@@ -2259,7 +2256,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 .bricks-wrapper .item-wrap .details-link {
   display: block;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   height: 4.6rem;
   width: 4.6rem;
   line-height: 4.6rem;
@@ -2274,10 +2270,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 .bricks-wrapper .item-wrap .details-link i {
   font-size: 2rem;
   line-height: 4.2rem;
-}
-.bricks-wrapper .item-wrap .details-link:hover, .bricks-wrapper .item-wrap .details-link:focus {
-  background-color: #FFFFFF;
-  color: #000000;
 }
 .bricks-wrapper .item-wrap .item-text {
   opacity: 0;
