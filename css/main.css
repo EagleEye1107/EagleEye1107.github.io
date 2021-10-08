@@ -1423,25 +1423,25 @@ header .header-logo a {
 #menu-nav-wrap .nav-list li a:focus {
   color: white;
 }
-#menu-nav-wrap .header-social-list {
+.header-social-list {
   list-style: none;
   display: inline-block;
   margin: 0;
   font-size: 2.1rem;
 }
-#menu-nav-wrap .header-social-list li {
+.header-social-list li {
   margin-right: 12px;
   padding-left: 0;
   display: inline-block;
 }
-#menu-nav-wrap .header-social-list li a {
+.header-social-list li a {
   color: rgba(255, 255, 255, 0.15);
 }
-#menu-nav-wrap .header-social-list li a:hover, 
-#menu-nav-wrap .header-social-list li a:focus {
+.header-social-list li a:hover, 
+.header-social-list li a:focus {
   color: white;
 }
-#menu-nav-wrap .header-social-list li:last-child {
+.header-social-list li:last-child {
   margin: 0;
 }
 #menu-nav-wrap .close-button {
@@ -2977,7 +2977,6 @@ footer h4.h05::after {
   padding-bottom: 3rem;
 }
 .footer-main ul {
-  font-size: 1.5rem;
   margin-left: 0;
 }
 .footer-main ul li {
