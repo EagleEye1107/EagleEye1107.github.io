@@ -796,6 +796,13 @@ button.large, .button.large {
   padding: 0rem 3rem !important;
 }
 
+button.github, .button.github {
+  background: transparent !important;
+  border: 2px solid #f9a828;
+  color: #f9a828;
+  line-height: 4.8rem;
+}
+
 button.stroke, .button.stroke {
   background: transparent !important;
   border: 3px solid white;
@@ -2397,24 +2404,24 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   text-align: center;
 }
 #testimonials h2 {
-  font-family: "montserrat-bold", sans-serif;
+  font-family: "montserrat-regular", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  color: black;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
-  margin-bottom: 4.2rem;
+  margin-bottom: 0.5rem;
 }
 
 #testimonials h3 {
   font-family: "montserrat-bold", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.8 rem;
   line-height: 1.667;
   color: #f9a828;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  position: relative;
+  margin-bottom: 1.2rem;
 }
 
 #testimonials .flex-container {
