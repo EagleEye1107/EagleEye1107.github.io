@@ -2,216 +2,731 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development - Ahmed-Rafik-El Mehdi BAAHMED, Ph.D. Candidate</title>
+    <title>Ahmed-Rafik-El Mehdi BAAHMED, Ph.D. Candidate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon_eng.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg {
-            background: linear-gradient(135deg, #b68d00 0%, #ffd700 50%, #fff5cc 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
         }
-        .floating-animation {
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .floating-icon {
             animation: float 6s ease-in-out infinite;
         }
-        .floating-animation:nth-child(2) { animation-delay: -2s; }
-        .floating-animation:nth-child(3) { animation-delay: -4s; }
+        .floating-icon:nth-child(2) { animation-delay: -2s; }
+        .floating-icon:nth-child(3) { animation-delay: -4s; }
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             33% { transform: translateY(-20px) rotate(5deg); }
             66% { transform: translateY(-10px) rotate(-5deg); }
         }
-        .pulse-animation {
-            animation: pulse 2s ease-in-out infinite;
+        .timeline-line {
+            position: relative;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #60a5fa);
         }
-        .bounce-animation {
-            animation: bounce 2s ease-in-out infinite;
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #dbeafe;
         }
-        .progress-bar {
-            width: 0%;
-            animation: progress 3s ease-in-out infinite;
-        }
-        @keyframes progress {
-            0% { width: 0%; }
-            50% { width: 75%; }
-            100% { width: 0%; }
-        }
-        .gear {
-            animation: rotate 4s linear infinite;
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .typewriter {
+        .skill-bar {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
             overflow: hidden;
-            border-right: 2px solid #3b82f6;
-            white-space: nowrap;
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
         }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 4px;
+            transition: width 2s ease-in-out;
         }
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #3b82f6; }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob 8s ease-in-out infinite;
+        }
+        @keyframes blob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
         }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-4{bottom:-1rem}.-left-4{left:-1rem}.-right-4{right:-1rem}.-right-8{right:-2rem}.-top-4{top:-1rem}.-top-8{top:-2rem}.bottom-16{bottom:4rem}.bottom-2{bottom:0.5rem}.bottom-20{bottom:5rem}.bottom-4{bottom:1rem}.bottom-40{bottom:10rem}.left-1\/2{left:50%}.left-10{left:2.5rem}.left-20{left:5rem}.left-6{left:1.5rem}.right-10{right:2.5rem}.right-20{right:5rem}.right-6{right:1.5rem}.top-1\/2{top:50%}.top-20{top:5rem}.top-40{top:10rem}.top-6{top:1.5rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-80{height:20rem}.min-h-screen{min-height:100vh}.w-1\/2{width:50%}.w-1\/3{width:33.333333%}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2\/3{width:66.666667%}.w-20{width:5rem}.w-3{width:0.75rem}.w-3\/4{width:75%}.w-6{width:1.5rem}.w-80{width:20rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-6{gap:1.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-400{--tw-bg-opacity:1;background-color:rgb(96 165 250 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-400{--tw-bg-opacity:1;background-color:rgb(74 222 128 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-400{--tw-bg-opacity:1;background-color:rgb(192 132 252 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-gold-50 {--tw-gradient-from: #fffbea var(--tw-gradient-from-position);--tw-gradient-to: rgb(255 251 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);}.from-gold-500 {--tw-gradient-from: #ffd700 var(--tw-gradient-from-position);--tw-gradient-to: rgb(255 215 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);}.from-green-500{--tw-gradient-from:#22c55e var(--tw-gradient-from-position);--tw-gradient-to:rgb(34 197 94 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-to:rgb(168 85 247 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-green-600{--tw-gradient-to:#16a34a var(--tw-gradient-to-position)}.to-purple-50{--tw-gradient-to:#faf5ff var(--tw-gradient-to-position)}.to-purple-500{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gold-600 {--tw-text-opacity: 1;color: rgb(212 163 0 / var(--tw-text-opacity, 1));}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style><style></style><style></style><style id="LLPlatform"></style></head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center"><div id="shadowLL"><div id="shadowLL"></div></div>
-    <!-- Background Elements -->
-    <div class="absolute inset-0 overflow-hidden">
-        <div class="floating-animation absolute top-20 left-10 w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl opacity-60">
-            🔧
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.inset-8{inset:2rem}.bottom-20{bottom:5rem}.bottom-40{bottom:10rem}.left-10{left:2.5rem}.left-20{left:5rem}.left-4{left:1rem}.right-10{right:2.5rem}.right-20{right:5rem}.right-4{right:1rem}.top-0{top:0px}.top-1\/2{top:50%}.top-20{top:5rem}.top-40{top:10rem}.z-40{z-index:40}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.ml-6{margin-left:1.5rem}.ml-auto{margin-left:auto}.mr-2{margin-right:0.5rem}.mr-4{margin-right:1rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-80{height:20rem}.h-96{height:24rem}.h-full{height:100%}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-20{width:5rem}.w-24{width:6rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.min-w-full{min-width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-none{max-width:none}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-t{border-top-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-400{--tw-bg-opacity:1;background-color:rgb(74 222 128 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/20{background-color:rgb(255 255 255 / 0.2)}.bg-white\/30{background-color:rgb(255 255 255 / 0.3)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 246 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-600{--tw-gradient-from:#16a34a var(--tw-gradient-from-position);--tw-gradient-to:rgb(22 163 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-orange-600{--tw-gradient-from:#ea580c var(--tw-gradient-from-position);--tw-gradient-to:rgb(234 88 12 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-600{--tw-gradient-from:#db2777 var(--tw-gradient-from-position);--tw-gradient-to:rgb(219 39 119 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-teal-600{--tw-gradient-from:#0d9488 var(--tw-gradient-from-position);--tw-gradient-to:rgb(13 148 136 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-100{--tw-gradient-to:#dbeafe var(--tw-gradient-to-position)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-indigo-100{--tw-gradient-to:#e0e7ff var(--tw-gradient-to-position)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.to-red-600{--tw-gradient-to:#dc2626 var(--tw-gradient-to-position)}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-8xl{font-size:6rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-100{--tw-text-opacity:1;color:rgb(220 252 231 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-orange-100{--tw-text-opacity:1;color:rgb(255 237 213 / var(--tw-text-opacity, 1))}.text-pink-100{--tw-text-opacity:1;color:rgb(252 231 243 / var(--tw-text-opacity, 1))}.text-purple-100{--tw-text-opacity:1;color:rgb(243 232 255 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-teal-100{--tw-text-opacity:1;color:rgb(204 251 241 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.duration-300{transition-duration:300ms}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-400:hover{--tw-bg-opacity:1;background-color:rgb(156 163 175 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/30:hover{background-color:rgb(255 255 255 / 0.3)}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.focus\:border-transparent:focus{border-color:transparent}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}}</style><style></style><style></style><style id="LLPlatform"></style></head>
+<body class="bg-gray-50 text-gray-800"><div id="shadowLL"><div id="shadowLL"></div></div>
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AB</span>
+                    </div>
+                    <span class="text-l font-semibold text-gray-800">Ahmed-Rafik-El Mehdi BAAHMED, Ph.D. Candidate</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Projects</a>
+                    <a href="#presentations" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Presentations</a>
+                    <a href="#certificates" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Certificates</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="floating-animation absolute top-40 right-20 w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl opacity-60">
-            ⚙️
-        </div>
-        <div class="floating-animation absolute bottom-40 left-20 w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-xl opacity-60">
-            🚀
-        </div>
-        <div class="floating-animation absolute bottom-20 right-10 w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center text-2xl opacity-60">
-            💡
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+            <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+            <a href="#presentations" class="text-gray-700 hover:text-blue-600 transition-colors">Presentations</a>
+            <a href="#certificates" class="text-gray-700 hover:text-blue-600 transition-colors">Certificates</a>
+            <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
         </div>
     </div>
 
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <!-- Main Illustration -->
-        <div class="mb-12">
-            <div class="relative mx-auto w-80 h-80 mb-8">
-                <!-- Computer Screen -->
-                <div class="absolute inset-0 bg-gray-800 rounded-3xl shadow-2xl">
-                    <!-- Screen -->
-                    <div class="absolute top-6 left-6 right-6 bottom-16 bg-gray-900 rounded-2xl overflow-hidden">
-                        <!-- Code Lines -->
-                        <div class="p-6 space-y-3">
-                            <div class="flex space-x-2">
-                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen gradient-bg relative overflow-hidden">
+        <!-- Floating Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-icon absolute top-40 left-10 w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">
+                🧠
+            </div>
+            <div class="floating-icon absolute top-40 right-20 w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-3xl">
+                🧑‍💻
+            </div>
+            <div class="floating-icon absolute bottom-40 left-20 w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl">
+                📡
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+                <div class="text-white">
+                    <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-8">
+                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                        Available for Research Roles <!-- &amp; Collaborations -->
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Professional Showcase
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed max-w-xl">
+                        Explore my portfolio of professional projects,
+                        conference presentations, and professional certifications.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="files/CV_Ahmed-Rafik_BAAHMED_2026.pdf" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all shadow-lg">Curriculum Vitae</a>
+                        <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all">Back to Home</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto relative">
+                        <div class="absolute inset-0 bg-white/20 blob"></div>
+                        <div class="absolute inset-8 bg-white/30 blob" style="animation-delay: -2s;"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="flex flex-col items-center">
+                              <!-- Avatar Image -->
+                              <img src="pres_picture.jpeg" alt="Avatar" style="border-radius: 50%; width: 300px">
+                          
+                              <!-- Social Icons -->
+                              <div class="mt-6 flex space-x-4">
+                                <a href="https://www.linkedin.com/in/ahmed-rafik-el-mehdi-baahmed-7552311a0/" class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition">
+                                  <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="https://github.com/EagleEye1107" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-black transition">
+                                  <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=nHiGwtkAAAAJ&hl=en&oi=ao" class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition">
+                                  <i class="fas fa-graduation-cap text-xl"></i>
+                                </a>
+                              </div>
                             </div>
-                            <div class="space-y-2 mt-6">
-                                <div class="h-2 bg-blue-400 rounded w-3/4 pulse-animation"></div>
-                                <div class="h-2 bg-green-400 rounded w-1/2 pulse-animation" style="animation-delay: 0.5s;"></div>
-                                <div class="h-2 bg-purple-400 rounded w-2/3 pulse-animation" style="animation-delay: 1s;"></div>
-                                <div class="h-2 bg-yellow-400 rounded w-1/3 pulse-animation" style="animation-delay: 1.5s;"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Profesisonal Projects</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700">A collection of innovative professional projects exploring various cutting-edge technologies.</p>
+            </div>
+            <!-- Projects Grid -->
+            <div class="flex flex-wrap justify-center gap-6 mt-12">
+                <!-- Project 1 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="ai" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                        <img src="images/Projects/artificialeye.png" alt="Avatar" style="border-radius: 0%; width: 425px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ArtificialEye</h3>
+                        <p class="text-gray-600 mb-4">
+                            A Real-Time Computer Vision and Deep Learning-Based support system for visually impaired people in an outdoor environment. [2022]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">AI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python/OpenCV</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Raspberry Pi</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">IoT</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Kafka Broker</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/Blind-Support-System" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/Blind-Support-System" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="ai edge" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+                        <img src="images/Projects/brain.jpg" alt="Avatar" style="border-radius: 25%; width: 175px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Alzheimer-AI</h3>
+                        <p class="text-gray-600 mb-4">
+                            A Multi-Modal Deep Learning Framework for Early-Stage Alzheimer's Detection: Leveraging Automated Computer Vision Pipelines on Neuroimaging Data. [2022]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Deep Learning</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">TensorFlow</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/Alzheimers-Disease-5-Class" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/Alzheimers-Disease-5-Class" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="iot edge" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <img src="images/Projects/brain_extraction_example.png" alt="Avatar" style="border-radius: 0%; width: 425px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Brain MRI Preprocessing</h3>
+                        <p class="text-gray-600 mb-4">
+                            A Robust Preprocessing Pipeline for Enhanced Brain MRI Diagnostics: Optimizing High-Resolution Neuroimaging Data for Machine Learning Integration. [2022]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Data Analytics</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">OpenCV</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/MRI-brain-images-dataset-preprocessing" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/MRI-brain-images-dataset-preprocessing" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="edge ai" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
+                        <img src="images/Projects/lectio.png" alt="Avatar" style="border-radius: 0%; width: 400px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Lectio</h3>
+                        <p class="text-gray-600 mb-4">
+                            Full-Stack eBook Platform: A Complete Web Store for Digital Books. [2021]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Web Dev</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/eBook" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/eBook" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="iot" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center">
+                        <img src="images/Projects/HEALTHLINE.PNG" alt="Avatar" style="border-radius: 2%; width: 400px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">HEALTHLINE</h3>
+                        <p class="text-gray-600 mb-4">
+                            Digital Transformation of Clinical Workflows: Implementing a Unified Web/Mobile Solution for Automated Medical Record Management. [2021]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Web Dev</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">NodeJS</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">SQL</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/HEALTHLINE" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/HEALTHLINE" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="overflow-hidden card project-item bg-white rounded-xl shadow-lg w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]" data-category="iot" style="display: block;">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <img src="images/Projects/ESIWEATHER.png" alt="Avatar" style="border-radius: 2%; width: 350px">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ESI WEATHER</h3>
+                        <p class="text-gray-600 mb-4">
+                            An Autonomous IoT Weather Analytics Framework: Architecting a Solar-Powered, Real-Time Environmental Monitoring System with Firebase Cloud Integration. [2021]
+                        </p>
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">IoT</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">WSN</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Arduino</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Autonomous Solar System</span>
+                        </div>
+                        <div class="flex items-center justify-between"><a href="https://github.com/EagleEye1107/AN-INTELLIGENT-CONNECTED-WEATHER-STATION" class="text-blue-600 hover:text-blue-800 font-medium flex items-center"> View Project <i class="fas fa-arrow-right ml-2"></i> </a> <a href="https://github.com/EagleEye1107/AN-INTELLIGENT-CONNECTED-WEATHER-STATION" class="text-gray-600 hover:text-gray-800"> <i class="fab fa-github text-xl"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="presentations" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Presentations</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700">Selected presentations from international conferencs and animated workshops.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mt-12">
+                <!-- Presentation 1 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1gQ7qbQgV_rw9hMv6SYmO3rIG3hYkX_Y_/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/Hyperparam_FEEL.png" alt="Edge Intelligence" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-blue-400 text-sm font-medium mb-2">Edge Computing &amp; AI</span>
+                            <h3 class="text-white text-xl font-bold">Edge Intelligence: The Future of Collaborative AI</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 2 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1DdulRrcPeTFFxTG889p3H4Ngl-8fg5oF/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/E-GNNExplainer.png" alt="Federated Learning" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-purple-400 text-sm font-medium mb-2">Explainable Artificial Intelligence</span>
+                            <h3 class="text-white text-xl font-bold">Explainable Graph Neural Networks</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 3 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1eb0vA_bizhAm2izrrGqAcBh7bCELGL69/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/IoT_WSN.png" alt="Neural Network Compression" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-green-400 text-sm font-medium mb-2">Internet of Things</span>
+                            <h3 class="text-white text-xl font-bold">The key technology of a Wireless Sensor Network (WSN)</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 4 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/13ONxuGXEydX46eWgOQpSKXr_uqr2qEc9/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/TROJANNET.PNG" alt="Privacy-Preserving AI" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-orange-400 text-sm font-medium mb-2">Deep Learning Security</span>
+                            <h3 class="text-white text-xl font-bold">Data Poisoning with TrojanNet Attacks</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 5 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1bZKMViZ7E-w_MOVV3DUG_nWf-aaZSnXx/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/ArduinoWorkshopProjectGuide3.0.PNG" alt="Autonomous Systems" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-indigo-400 text-sm font-medium mb-2">Internet Of Things</span>
+                            <h3 class="text-white text-xl font-bold">Arduino Workshop</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 6 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1Lh45zSgTljkoru9cR4F1Y_ARTV1nCwe-/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/CRYPTO.PNG" alt="Autonomous Systems" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-yellow-400 text-sm font-medium mb-2">Cryptography</span>
+                            <h3 class="text-white text-xl font-bold">Taxonomy of Modern ciphers</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 7 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/13fOXdzyBK4A-tLLh422dzUX6lTnJ2TQX/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/WEBSERVER.PNG" alt="Autonomous Systems" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-lime-400 text-sm font-medium mb-2">Web Server Security</span>
+                            <h3 class="text-white text-xl font-bold">DoS, DDoS, LFI, RFI, DT & SQLi Attacks</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Presentation 8 -->
+                <div class="h-64 bg-gradient-to-br flex items-center justify-center relative group overflow-hidden rounded-xl shadow-lg md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <a href="https://drive.google.com/file/d/1MtZxpPcAH0PL_bedDm_uj_9INpJxQgcH/view?usp=sharing" class="block relative" target="_blank" rel="noopener noreferrer">
+                        <img src="talk/images/WEBCLIENT.PNG" alt="Autonomous Systems" class="w-full h-70 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-cyan-400 text-sm font-medium mb-2">Web Client Security</span>
+                            <h3 class="text-white text-xl font-bold">XSS & CSRF Attacks</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="certificates" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Professional Certificates</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700">Recognized certifications demonstrating expertise in emerging technologies and research methodologies.</p>
+            </div>
+            <div id="certificate-slider" class="relative max-w-5xl mx-auto">
+                <div class="overflow-hidden">                    
+                    <ul class="slides flex transition-transform duration-500 ease-in-out h-full" id="certificate-slides" style="transform: translateX(0%);">
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/H7WTDRES8WTD" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/CSIBM5.PNG" alt="Certificate 1" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/BWLYHT9WNWGE" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/CSIBM6.PNG" alt="Certificate 2" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/VCQQQJLRWC86" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/MLGC.PNG" alt="Certificate 3" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://certificates.mooc.fi/validate/yxr30mhm8g" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/ElementsOfAI.PNG" alt="Certificate 4" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/YLNRNNFRT5SU" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/IntroBashShell.PNG" alt="Certificate 5" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://coc2021.sciencesconf.org/" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/COC2021.PNG" alt="Certificate 6" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://easychair.org/cfp/CICT-2022?spy=86947" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/cict2022.PNG" alt="Certificate 7" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="min-w-full flex-shrink-0 h-[300px] md:h-[500px]">
+                            <div class="px-4 flex justify-center items-center h-full">
+                                <a href="https://drive.google.com/file/d/1w-r5hW1KRImcDsOfiUd4rDAAw2ah8hvW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block h-full w-full flex items-center justify-center">
+                                    <img src="images/Certifs/COC2022.PNG" alt="Certificate 8" class="w-full h-full object-contain rounded-lg shadow-lg">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navigation Arrows -->
+                <button id="prev-cert" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-10">
+                    <i class="fas fa-chevron-left text-gray-800 text-xl"></i>
+                </button>
+                <button id="next-cert" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-10">
+                    <i class="fas fa-chevron-right text-gray-800 text-xl"></i>
+                </button>
+                <!-- Dots Navigation -->
+                <br>
+                <div class="flex justify-center gap-2" id="cert-dots">
+                    <button class="cert-dot w-3 h-3 rounded-full transition bg-blue-600" data-index="0"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="1"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="2"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="3"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="4"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="5"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="6"></button>
+                    <button class="cert-dot w-3 h-3 rounded-full transition hover:bg-gray-400 bg-gray-300" data-index="7"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Let's Connect</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Interested in collaboration, speaking opportunities, or discussing AI research?
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl visible">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">📧</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">abaahmed@cesi.fr</p>
                             </div>
                         </div>
                         
-                        <!-- Progress Bar -->
-                        <div class="absolute bottom-4 left-6 right-6">
-                            <div class="bg-gray-700 rounded-full h-2">
-                                <div class="progress-bar bg-gradient-to-r from-gold-500 to-purple-500 h-2 rounded-full"></div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-white text-xl">🏢</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Office</h4>
+                                <p class="text-gray-600">2 allée des Foulons<br>CESI Engineering School<br>BP 50016 - 67380 Lingolsheim<br>Strasbourg, France</p>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Keyboard -->
-                    <div class="absolute bottom-2 left-6 right-6 h-8 bg-gray-700 rounded-lg"></div>
+                    <div class="mt-8 pt-6 border-t border-blue-200">
+                        <h4 class="font-semibold mb-4 text-gray-800">Follow My Work</h4>
+                        <!-- Social Icons -->
+                        <div class="mt-6 flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ahmed-rafik-el-mehdi-baahmed-7552311a0/" class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition">
+                              <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://github.com/EagleEye1107" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-black transition">
+                              <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=nHiGwtkAAAAJ&hl=en&oi=ao" class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition">
+                              <i class="fas fa-graduation-cap text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Floating Gears -->
-                <div class="gear absolute -top-4 -right-4 w-16 h-16 text-4xl">⚙️</div>
-                <div class="gear absolute -bottom-4 -left-4 w-12 h-12 text-3xl" style="animation-direction: reverse; animation-duration: 6s;">🔧</div>
-                
-                <!-- Floating Elements -->
-                <div class="bounce-animation absolute -top-8 left-1/2 transform -translate-x-1/2 text-2xl">🚀</div>
-                <div class="bounce-animation absolute -right-8 top-1/2 transform -translate-y-1/2 text-2xl" style="animation-delay: 1s;">💡</div>
             </div>
         </div>
+    </section>
 
-        <!-- Header -->
-        <div class="mb-8">
-            <div class="flex items-center justify-center space-x-3 mb-6">
-                <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 z-40 flex items-center justify-center opacity-100 visible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="w-12 h-12 gradient-bg rounded-xl mx-auto mb-4 flex items-center justify-center">
                     <span class="text-white font-bold text-lg">AB</span>
                 </div>
-                <span class="text-2xl font-semibold text-gray-800">Ahmed-Rafik-El Mehdi BAAHMED</span>
-            </div>
-            
-            <h1 class="text-4xl lg:text-6xl font-bold text-gray-800 mb-4">
-                Under <span class="text-gold-600">Development</span>
-            </h1>
-            
-            <div class="typewriter text-xl text-gray-600 mb-6 mx-auto max-w-2xl" style="animation: 3s steps(40) 0s 1 normal none running typing, 0.75s step-end 0s infinite normal none running blink-caret;">
-                Building something amazing for you...
+                <p class="text-gray-300 mb-2">© 2026 Ahmed-Rafik-El Mehdi BAAHMED. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">Doctoral Researcher (Ph.D. Candidate) • Advancing AI &amp; Edge Intelligence</p>
             </div>
         </div>
+    </footer>
 
-        <!-- Contact Information -->
-        <div class="bg-gradient-to-r from-gold-50 to-purple-50 rounded-2xl p-8 mb-8">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Stay Connected</h3>
-            <p class="text-gray-600 mb-6">
-                Want to be notified when the site launches? Connect with me on social media 
-                or reach out directly for research collaborations.
-            </p>
-            
-            <div class="flex justify-center space-x-4 mb-6">
-                <!-- Social Icons -->
-                <div class="mt-6 flex space-x-4">
-                    <a href="https://www.linkedin.com/in/ahmed-rafik-el-mehdi-baahmed-7552311a0/" class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition">
-                      <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://github.com/EagleEye1107" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-black transition">
-                      <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=nHiGwtkAAAAJ&hl=en&oi=ao" class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition">
-                      <i class="fas fa-graduation-cap text-xl"></i>
-                    </a>
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <div id="modal-category" class="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"></div>
+                        <h2 id="modal-title" class="text-3xl font-bold mb-2 text-gray-800"></h2>
+                        <div id="modal-meta" class="text-gray-500"></div>
+                    </div>
+                    <button onclick="closeBlogModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-light">×</button>
                 </div>
+                <div id="modal-content" class="prose prose-gray max-w-none"></div>
             </div>
-            
-            <div class="text-center">
-                <p class="text-gray-600 text-sm mb-2">
-                    <strong>Email:</strong>abaahmed@cesi.fr
-                </p>
-                <p class="text-gray-600 text-sm">
-                    <strong>Location:</strong> 2 allée des Foulons, CESI Engineering School BP 50016 - 67380 Lingolsheim, Strasbourg, France
-                </p>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="text-center text-gray-500 text-sm">
-            <p>© 2025 Ahmed-Rafik-El Mehdi BAAHMED. All rights reserved.</p>
-            <p class="mt-1">Doctoral Researcher (Ph.D. Candidate) • Advancing AI &amp; Edge Intelligence</p>
         </div>
     </div>
 
     <script>
-        // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Restart typewriter animation periodically
-            setInterval(function() {
-                const typewriter = document.querySelector('.typewriter');
-                typewriter.style.animation = 'none';
-                setTimeout(() => {
-                    typewriter.style.animation = 'typing 3s steps(40, end), blink-caret 0.75s step-end infinite';
-                }, 100);
-            }, 6000);
-            
-            // Add click interactions to floating elements
-            document.querySelectorAll('.floating-animation, .bounce-animation').forEach(element => {
-                element.addEventListener('click', function() {
-                    this.style.transform = 'scale(1.2)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 200);
-                });
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
+
+        // Skill bar animation
+        const animateSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        };
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.querySelector('.skill-progress')) {
+                        setTimeout(animateSkillBars, 500);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.fade-up, .bg-gradient-to-br').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a demo form - in a real website, this would send your message.');
+        }
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Certificate slider functionality
+        const certSlides = document.getElementById('certificate-slides');
+        const certDots = document.querySelectorAll('.cert-dot');
+        const prevCertBtn = document.getElementById('prev-cert');
+        const nextCertBtn = document.getElementById('next-cert');
+        let currentCertIndex = 0;
+        const totalCerts = 8;
+        
+        function updateCertSlider() {
+            certSlides.style.transform = `translateX(-${currentCertIndex * 100}%)`;
+            
+            // Update dots
+            certDots.forEach((dot, index) => {
+                if (index === currentCertIndex) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-blue-600');
+                } else {
+                    dot.classList.remove('bg-blue-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+        
+        nextCertBtn.addEventListener('click', () => {
+            currentCertIndex = (currentCertIndex + 1) % totalCerts;
+            updateCertSlider();
+        });
+        
+        prevCertBtn.addEventListener('click', () => {
+            currentCertIndex = (currentCertIndex - 1 + totalCerts) % totalCerts;
+            updateCertSlider();
+        });
+        
+        certDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentCertIndex = parseInt(dot.getAttribute('data-index'));
+                updateCertSlider();
+            });
+        });
+        
+        // Auto-advance slider every 5 seconds
+        setInterval(() => {
+            currentCertIndex = (currentCertIndex + 1) % totalCerts;
+            updateCertSlider();
+        }, 5000);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9586731665ea0076',t:'MTc1MTM3ODYzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9583f119b1a19eb3',t:'MTc1MTM1MjMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
 
 </body></html>
